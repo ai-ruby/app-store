@@ -1,0 +1,29 @@
+@mixin media-list {
+    position: relative;
+    display: flex;
+    font-size: 16px;
+    &-body {
+        color: #666;
+        font-size: 14px;
+        &-hd {
+            margin-right: 10px;
+            width: 60px;
+            height: 60px;
+            overflow: hidden;
+            img {
+              width: 100%;
+              border-radius: 12px;
+            }
+        }
+        &-bd {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &-title {
+            color: #333;
+            font-size: 16px;
+        }
+    }
+}

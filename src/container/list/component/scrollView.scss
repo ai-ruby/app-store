@@ -1,0 +1,47 @@
+@import './mixin.scss';
+
+.scroll-view {
+  background-color: #fff;
+  .media-list {
+      @include media-list;
+      align-items: center;
+      padding: 10px;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        bottom: 0;
+        width: auto;
+        height: 1px;
+        background-color: #f1f1f1;
+      }
+      &:last-child {
+        border: none;
+      }
+      &:nth-child(2n) {
+        .media-list-column-hd{
+          img {
+              border-radius: 50%;
+            }
+          }
+      }
+      &-body {
+        flex: 1;
+        display: flex;
+        color: #666;
+      }
+      .serial-number {
+        margin-right: 10px;
+        width: 25px;
+        font-size: 20px;
+        color: #868585;
+      }
+      &-column {
+        &-stars {
+            font-size: 10px;
+            margin-left: 10px;
+        }
+      }
+  }
+}
